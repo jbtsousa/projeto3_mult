@@ -6,12 +6,12 @@
 
 section{
 }
-div{
+.info{
     position: absolute;
     width: calc(100%/3);
+    z-index: 1;
 }
 .container{
-    z-index: -1;
     display: flex;
     position: relative;
     width: 92vw;
@@ -20,10 +20,12 @@ div{
 }
 
 
-#text1{
-    background-image: url(../img/fundo1.png);
+#intro img{
+    /* background-image: url(../img/fundo1.png);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+    position: absolute;
+    top:0;
 }
 .text1-container-info1{
     top: 10%;
@@ -36,20 +38,25 @@ div{
 
 
 #text2{
-    background-image: url(../img/fundo2.png);
+    /* background-image: url(../img/fundo2.png);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
+}
+
+#text2 video{
+  object-fit: cover;
+  position: absolute;
 }
 .text2-container-info1{
     margin: auto;
     top: 20%;
     left: 0;
+
+}
+.text2-container{
 }
 
 
-#text3{
-    
-}
 .text3-container-info1{
     bottom: 10%;
     right: 0;
