@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+section{
+}
+div{
+    position: absolute;
+    width: calc(100%/3);
+}
+.container{
+    z-index: -1;
+    display: flex;
+    position: relative;
+    width: 92vw;
+    height: 92vh;
+    margin: 8vh auto 20vh auto;
+}
+
+
+#text1{
+    background-image: url(../img/fundo1.png);
+    background-size: cover;
+    background-position: center;
+}
+.text1-container-info1{
+    top: 10%;
+    left: 0;
+}
+.text1-container-info2{
+    right: 0;
+    bottom: 10%;
+}
+
+
+#text2{
+    background-image: url(../img/fundo2.png);
+    background-size: cover;
+    background-position: center;
+}
+.text2-container-info1{
+    margin: auto;
+    top: 20%;
+    left: 0;
+}
+
+
+#text3{
+    
+}
+.text3-container-info1{
+    bottom: 10%;
+    right: 0;
+}
