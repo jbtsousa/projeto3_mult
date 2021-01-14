@@ -36,13 +36,6 @@ section{
     bottom: 10%;
 }
 
-
-#text2{
-    /* background-image: url(../img/fundo2.png);
-    background-size: cover;
-    background-position: center; */
-}
-
 #text2 video{
   object-fit: cover;
   position: absolute;
@@ -53,11 +46,11 @@ section{
     left: 0;
 
 }
-.text2-container{
-}
-
 
 .text3-container-info1{
     bottom: 10%;
     right: 0;
 }
+#part2_1 video{
+width: 90vw;
+margin:auto;}
