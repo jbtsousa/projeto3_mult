@@ -4,53 +4,51 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+
 section{
-}
-.info{
-    position: absolute;
-    width: calc(100%/3);
-    z-index: 1;
-}
-.container{
-    display: flex;
     position: relative;
-    width: 92vw;
-    height: 92vh;
-    margin: 8vh auto 20vh auto;
 }
-
-
-#intro img{
-    /* background-image: url(../img/fundo1.png);
-    background-size: cover;
-    background-position: center; */
+/*Todos os textos da intro vão ter esta largura para formar 3 colunas*/
+.text {
     position: absolute;
-    top:0;
+    width: calc(100vw/3);
+    margin: 0 4%;
 }
-.text1-container-info1{
+/*Os paragrafos = mas vão estar sempre centrados*/
+.paragraph {
+    position: absolute;
+    width: calc(100vw/3);
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p{
+    font-size: 1em;
+    line-height: 1.5;
+}
+/*Os videos ocupam a largura toda da section, so os textos é que são absolute para andarem sempre dentro da section*/
+video{
+    width: 100vw;
+}
+
+
+
+/*--------------------------INTRO-------------------------*/
+.intro-text1{
     top: 10%;
-    left: 0;
 }
-.text1-container-info2{
+.intro-text2{
     right: 0;
+    text-align: right;
     bottom: 10%;
 }
 
-#text2 video{
-  object-fit: cover;
-  position: absolute;
-}
-.text2-container-info1{
-    margin: auto;
-    top: 20%;
-    left: 0;
 
+
+
+/*--------------------------PARTE 2-------------------------*/
+#part2-text1 video{
+    width: 80vw;
 }
 
-.text3-container-info1{
-    bottom: 10%;
-    right: 0;
-}
-#part2_1 video{
-width: 90vw;
-margin:auto;}
