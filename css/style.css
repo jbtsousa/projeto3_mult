@@ -24,7 +24,9 @@ section{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.white{
+    color: #FFF;
+}
 p{
     font-size: 1em;
     line-height: 1.5;
@@ -54,8 +56,13 @@ video{
 
 
 /*--------------------------PARTE 3 - Cabeça texto ajustado -------------------------*/
+/*tirei isto pq estava a alterar o text5-container na parte1, pus antes uma class chamada white dentro de cada text container e defini-a la em cima
 .text5-container {
     color: white;
+    top: 38%;
+}
+*/
+.head {
     top: 38%;
 }
 
