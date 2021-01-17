@@ -4,9 +4,10 @@
     font-family: 'Work Sans', sans-serif;
 }
 
-
 section{
     position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
 /*Todos os textos da intro vão ter esta largura para formar 3 colunas*/
@@ -33,7 +34,8 @@ p{
 }
 /*Os videos ocupam a largura toda da section, so os textos é que são absolute para andarem sempre dentro da section*/
 video{
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -47,21 +49,26 @@ video{
     text-align: right;
     bottom: 10%;
 }
+#intro video{
+  object-fit: cover;
+}
 
 
 /*--------------------------PARTE 2-------------------------*/
 #part2-text1 video{
-    width: 80vw;
 }
+.part2-text2-container p{
+  color:white;
+}
+
+#comboio{
+
+}
+
 
 
 /*--------------------------PARTE 3 - Cabeça texto ajustado -------------------------*/
-/*tirei isto pq estava a alterar o text5-container na parte1, pus antes uma class chamada white dentro de cada text container e defini-a la em cima
-.text5-container {
-    color: white;
-    top: 38%;
-}
-*/
+
 .head {
     top: 38%;
 }
