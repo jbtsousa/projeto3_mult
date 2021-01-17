@@ -8,6 +8,7 @@
 section{
     position: relative;
 }
+
 /*Todos os textos da intro vão ter esta largura para formar 3 colunas*/
 .text {
     position: absolute;
@@ -23,6 +24,7 @@ section{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 p{
     font-size: 1em;
     line-height: 1.5;
@@ -45,10 +47,26 @@ video{
 }
 
 
-
-
 /*--------------------------PARTE 2-------------------------*/
 #part2-text1 video{
     width: 80vw;
 }
 
+
+/*--------------------------PARTE 3 - Cabeça texto ajustado -------------------------*/
+.text5-container {
+    color: white;
+    top: 38%;
+}
+
+/*------texto à esquerda da cabeça------*/
+.cabeça-esq {
+    left: 2%;
+    top: 75%;
+}
+
+/*--------texto à direita da cabeça-------*/
+.cabeça-dir {
+    right: 2%;
+    top: 75%;
+}
