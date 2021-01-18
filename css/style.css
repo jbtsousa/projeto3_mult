@@ -55,11 +55,10 @@ video{
 
 
 /*--------------------------PARTE 2-------------------------*/
-#part2-text1 video{
+.part2-text1 {
+  overflow:scroll;
 }
-.part2-text2-container p{
-  color:white;
-}
+
 
 #comboio{
 

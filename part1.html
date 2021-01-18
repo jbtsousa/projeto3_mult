@@ -9,12 +9,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="lib/isInViewport.min.js">
-    <script src="lib/isInViewport.js">
+    <script src="lib/isInViewport.min.js"> </script>
+    <script src="lib/isInViewport.js"> </script>
 
-    </script>
-
-    <title>O Último Sofrimento</title>
+    <title>O Primeiro Sofrimento</title>
 </head>
 <body>
 
@@ -85,7 +83,7 @@
                 <source src="img/pt1/pt1_sect5.mp4" type="video/mp4">
             </video>
             <div class="text5-container paragraph">
-                <p>Mas também era bom vê-lo lá cm cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mes- mo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam</p>
+                <p>Mas também era bom vê-lo lá cm cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mesmo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam</p>
             </div>
         </section>
 
@@ -101,7 +99,7 @@
         </section>
 
         <section id="part2-text2" data-aos="fade-in">
-            <video muted>
+            <video id="conversa" muted>
                 <source src="img/pt2/conversa.mp4" type="video/mp4">
             </video>
             <div class="part2-text2-container paragraph">
@@ -182,7 +180,6 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
 
 $(window).scroll(function(){
 
-
   $('video').each(function(){
       if ($(this).is(":in-viewport(50)")) {
           $(this)[0].play();
@@ -190,7 +187,24 @@ $(window).scroll(function(){
           $(this)[0].pause();
       }
   })
-})
+
+
+   if ($("#part2-text1").is(":in-viewport(50)")){
+     var scroll = $(window).scrollTop() -4975;
+   console.log(scroll);
+     $("#comboio").css({
+       width: (100 + scroll/5) + "%"
+     })
+          $("#comboio").css({
+             opacity: 1- scroll / 700
+
+         })
+   }
+
+
+
+
+});
 
       </script>
 </body>
