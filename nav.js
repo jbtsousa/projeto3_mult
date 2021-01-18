@@ -12,7 +12,7 @@ $(window).bind('scroll',function(e){
         $('section').each(function(i,item){
             var ele = $(item), nextTop;
 
-            console.log(ele.next().html());
+            //console.log(ele.next().html());
 
             if (typeof ele.next().offset() != "undefined") {
                 nextTop = ele.next().offset().top;
@@ -53,5 +53,26 @@ $(window).bind('scroll',function(e){
     });
 
     /* end dot nav */
+
 });
 
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    var introHeight = $("#intro").height();
+    //console.log("janela: " + height + "secção: " + introHeight);
+    
+    if(height >= introHeight){
+        $("#menu").fadeIn();
+    }
+    else{
+        $("#menu").fadeOut();
+    }
+});
+
+
+/*------------------------flashback-------------------------*/
+$(".flashback").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#nr1").offset().top
+    }, 4000);
+});

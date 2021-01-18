@@ -10,6 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
     <script src="lib/isInViewport.min.js"> </script>
     <script src="lib/isInViewport.js"> </script>
 
@@ -35,6 +36,15 @@
             <li><a href="#part3_text4"></a></li>
             <li><a href="#part3_text5"></a></li>
         </ul>
+    </div>
+
+    <div class="mobile-popup">
+        <div class="popup">
+            <p>Para conseguir uma melhor experiência, coloque o seu telemóvel em modo desktop</p>
+            <img src="img/mobile.png" alt="mobile-advice">
+            <p><b>Bom espetáculo!</b></p>
+        </div>
+        <div class="popup-back"></div>
     </div>
 
     <main>
@@ -119,8 +129,8 @@
             <video id="comboio" autoplay muted loop>
                 <source src="img/pt2/parte2_fumo.mp4" type="video/mp4">
             </video>
-            <div class="part2-text1-container paragraph">
-                <p></p>
+            <div class="part2-text1-container">
+                <p id="quote"></p>
             </div>
         </section>
 
@@ -131,10 +141,11 @@
             <div class="part2-text2-container paragraph">
                 <p>O trapezista disse, mordendo os lábios, que precisava agora para o seu número, não de um, mas de dois trapézios, sempre dois trapézios, um em frente ao outro. O empresário concordou de imediato.
 O empresário, hesitante e atento, confirmou mais uma vez o seu total consentimento, dois trapézios era melhor que um.
-
                 </p>
             </div>
         </section>
+
+
 
 <!-- PARTE 3 -->
         <section id="part3_text1" data-aos="fade-in">
@@ -143,6 +154,9 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
             </video>
             <div class="text1-container paragraph">
                 <p>Foi então que de repente o trapezista começou a chorar.</p>
+            </div>
+            <div class="flashback">
+                <p>Descobre porquê...</p>
             </div>
         </section>
 
@@ -217,7 +231,7 @@ $(window).scroll(function(){
 
    if ($("#part2-text1").is(":in-viewport(50)")){
      var scroll = $(window).scrollTop() -4975;
-   console.log(scroll);
+   //console.log(scroll);
      $("#comboio").css({
        width: (100 + scroll/5) + "%"
      })
@@ -234,5 +248,7 @@ $(window).scroll(function(){
 
       </script>
 </body>
+<script type="text/javascript" src="quotes.js"></script>
+<script type="text/javascript" src="mobile.js"></script>
 <script type="text/javascript" src="nav.js"></script>
 </html>

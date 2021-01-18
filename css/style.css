@@ -3,7 +3,6 @@
     padding: 0;
     font-family: 'Work Sans', sans-serif;
 }
-
 /*Secções com nrs - altura menor*/
 #nr1 {
     height: 50vh;
@@ -48,6 +47,7 @@ video{
 /*--------------------------INTRO-------------------------*/
 .intro-text1{
     top: 10%;
+    z-index: 2;
 }
 .intro-text2{
     right: 0;
@@ -65,8 +65,14 @@ video{
 }
 
 
-#comboio{
-
+#quote{
+    position:absolute;
+    width: calc(100vw / 3);
+    top: 5%;
+    right: 5%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    font-size: 2em;
 }
 
 
@@ -87,4 +93,68 @@ video{
 .cabeça-dir {
     right: 2%;
     top: 75%;
+}
+
+.flashback{
+    border: 2px solid #000;
+    position: absolute;
+    right: 4%;
+    bottom: 10%;
+    padding: 1% 2%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.flashback:hover{
+    background: #000;
+    color: #fff;
+}
+
+
+
+/*--------------------------POPUP-------------------------*/
+.mobile-popup{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+.popup-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/circo.png);
+    background-position: center;
+    background-size: cover;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  
+}
+.popup{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    z-index: 2;
+    width: 70%;
+    margin: 0;
+    border-radius: 15px ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12% 4%;
+    text-align: center;
+}
+.popup img{
+    width: 60%;
+    margin: 5% 0;
+}
+@media screen and (max-width: 900px) {
+    p{
+        font-size: 12px;
+    }
+    #quote{
+        font-size: 18px;
+    }
 }
