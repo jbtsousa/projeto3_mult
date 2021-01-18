@@ -1,0 +1,55 @@
+/*Linha do menu*/
+#vl {
+    border-left: 1px solid black;
+    height: 380px;
+    position: absolute;
+    left: 10px;
+    top: 25%;
+}
+
+#menu{
+    position: fixed;
+    left: 35px;
+    height: 100px;
+    z-index: 9;
+    top: 30%;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+.grande li{
+    width: 15px;
+    height: 15px;
+}
+
+#menu li {
+    position: relative;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 3px;
+    width: 10px;
+    height: 10px;
+    margin: 10px 0 0 0;
+}
+
+#menu li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+#menu li.active, #menu li:hover {
+    background-color: black;
+}
+
+

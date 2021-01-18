@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,8 +17,27 @@
 </head>
 <body>
 
-    <main>
+    <div id="menu">
+        <div id="vl"></div>
+        <ul>
+            <li class="grande"><a href="#intro"></a></li>
+            <li><a href="#nr1"></a></li>
+            <li><a href="#text1"></a></li>
+            <li><a href="#text2"></a></li>
+            <li><a href="#text3"></a></li>
+            <li><a href="#text4"></a></li>
+            <li><a href="#text5"></a></li>
+            <li class="grande"><a href="#part2-text1"></a></li>
+            <li><a href="#part2-text2"></a></li>
+            <li class="grande"><a href="#part3_text1"></a></li>
+            <li><a href="#part3_text2"></a></li>
+            <li><a href="#part3_text3"></a></li>
+            <li><a href="#part3_text4"></a></li>
+            <li><a href="#part3_text5"></a></li>
+        </ul>
+    </div>
 
+    <main>
         <section id="intro">
             <video autoplay muted>
                 <source src="img/pt1/pt1_start.mp4" type="video/mp4">
@@ -32,6 +52,12 @@
                 <br>da Faculdade de Ciências e Tecnologia
                 <br>da Univerdade de Coimbra</p>
             </div>
+        </section>
+
+        <section id="nr1" data-aos="fade-in">
+            <video autoplay muted>
+                <source src="img/pt1/nr1.mp4" type="video/mp4">
+            </video>
         </section>
 
 
@@ -83,7 +109,7 @@
                 <source src="img/pt1/pt1_sect5.mp4" type="video/mp4">
             </video>
             <div class="text5-container paragraph">
-                <p>Mas também era bom vê-lo lá cm cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mesmo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam</p>
+                <p>Mas também era bom vê-lo lá em cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mesmo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam</p>
             </div>
         </section>
 
@@ -122,7 +148,7 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
 
 
 
-        <section id="parte3_text2" data-aos="fade-in">
+        <section id="part3_text2" data-aos="fade-in">
             <video muted>
                 <source src="img/pt3/pt3_sect3.mp4" type="video/mp4">
             </video>
@@ -134,7 +160,7 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
 
         <section id="part3_text3" data-aos="fade-in">
             <video muted>
-                <source src="img/pt3/Trapezios.mp4" type="video/mp4">
+                <source src="img/pt3/trap.mp4" type="video/mp4">
             </video>
             <div class="text4-container paragraph">
                 <p>“Com apenas esta barra nas mãos... como posso eu viver!”
@@ -208,4 +234,5 @@ $(window).scroll(function(){
 
       </script>
 </body>
+<script type="text/javascript" src="nav.js"></script>
 </html>
