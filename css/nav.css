@@ -6,7 +6,6 @@
     z-index: 9;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
     display: none;
 }
 /*Linha do menu*/
@@ -28,7 +27,6 @@
     position: relative;
     /*background-color: white;*/
     border: 2px solid white;
-    border-radius: 15px;
     cursor: pointer;
     margin: 10px auto;
     width: 0.75vw;

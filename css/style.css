@@ -4,8 +4,12 @@
     font-family: 'Work Sans', sans-serif;
 }
 /*Secções com nrs - altura menor*/
-#nr1 {
-    height: 50vh;
+#nr1, #nr3 {
+    height: 40vh;
+}
+
+#nr2 {
+    height: 60vh;
 }
 
 section{

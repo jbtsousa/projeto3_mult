@@ -5,13 +5,13 @@ $(window).bind('scroll',function(e){
 });
 
     function dotnavigation(){
-
         var numSections = $('section').length;
 
         $('#menu li a').removeClass('active').parent('li').removeClass('active');
         $('section').each(function(i,item){
             var ele = $(item), nextTop;
 
+            console.log($('section'));
             //console.log(ele.next().html());
 
             if (typeof ele.next().offset() != "undefined") {
@@ -21,7 +21,7 @@ $(window).bind('scroll',function(e){
                 nextTop = $(document).height();
             }
 
-            if (ele.offset() !== null) {
+            if (ele.offset() != null) {
                 thisTop = ele.offset().top - ((nextTop - ele.offset().top) / numSections);
             }
             else {
@@ -30,7 +30,7 @@ $(window).bind('scroll',function(e){
 
             var docTop = $(document).scrollTop();
 
-            if(docTop >= thisTop && (docTop < nextTop)){
+            if(docTop >= thisTop && (docTop < nextTop)) {
                 $('#menu li').eq(i).addClass('active');
             }
         });
