@@ -52,6 +52,10 @@
             <video autoplay muted>
                 <source src="img/pt1/pt1_start.mp4" type="video/mp4">
             </video>
+            <audio autoplay>
+              <source src="img/pt1/inicio.flac" type="audio/flac">
+            </audio>
+
             <div class="intro-text1 text">
                 <h1>O Primeiro Sofrimento<br> Franz Kafka</h1>
             </div>
@@ -82,9 +86,13 @@
 
 
         <section id="text2" data-aos="fade-in">
+          <audio>
+            <source src="img/pt1/exhale.wav" type="audio/wav">
+          </audio>
             <video muted>
                 <source src="img/pt1/pt1_sect2.mp4" type="video/mp4">
             </video>
+
             <div class="text2-container paragraph">
                 <p>é tida como uma das mais difíceis — vivia de tal maneira que, a princípio apenas para alcançar o perfeccionismo, mais tarde também por um hábito que se tornou tirânico,</p>
             </div>
@@ -102,9 +110,15 @@
 
 
         <section id="text4" data-aos="fade-in">
+          <audio>
+            <source src="img/pt1/aplauso3.wav" type="audio/wav">
+          </audio>
             <video muted>
                 <source src="img/pt1/pt1_sect4.mp4" type="video/mp4">
             </video>
+            <audio id="publico">
+              <source src="img/pt1/publico.mp3" type="audio/mp3">
+            </audio>
             <div class="text4-container paragraph">
                 <p>Esta maneira de viver não perturbava o ambiente por aí além; só durante os outros números é que atrapalhava um pouco tê-lo lá em cima dado que era impossível escondê-lo e, apesar de nessas alturas ele se comportar de modo bastante sossegado, o olhar do público desviava-se aqui e ali na sua direção.
                     <br>
@@ -115,17 +129,26 @@
         </section>
 
         <section id="text5" data-aos="fade-in">
+          <audio>
+            <source src="img/pt2/murmurio.wav" type="audio/wav">
+          </audio>
             <video  muted>
                 <source src="img/pt1/pt1_sect5.mp4" type="video/mp4">
             </video>
             <div class="text5-container paragraph">
-                <p>Mas também era bom vê-lo lá em cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mesmo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam</p>
+                <p>Mas também era bom vê-lo lá em cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mesmo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam.</p>
             </div>
         </section>
 
         <!-- PARTE 2 -->
+<div >
+  <audio>
+      <source src="img/pt2/comboio.mp3" type="audio/mp3">
+  </audio>
 
         <section id="part2-text1" data-aos="fade-right">
+
+
             <video id="comboio" autoplay muted loop>
                 <source src="img/pt2/parte2_fumo.mp4" type="video/mp4">
             </video>
@@ -143,12 +166,15 @@
 O empresário, hesitante e atento, confirmou mais uma vez o seu total consentimento, dois trapézios era melhor que um.
                 </p>
             </div>
-        </section>
 
+</div>
 
-
+</section>
 <!-- PARTE 3 -->
         <section id="part3_text1" data-aos="fade-in">
+          <audio>
+              <source src="img/pt3/lagrima.wav" type="audio/wav">
+          </audio>
             <video muted>
                 <source src="img/pt3/Gota_parte2.mp4" type="video/mp4">
             </video>
@@ -191,8 +217,9 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
                 <p>Mas ele próprio não estava sossegado, era com grande preocupação que observava, em segredo, o trapezista. A partir do momento em que pensamentos destes o começavam a torturar, </p>
             </div>
             <div class="cabeça-esq text">
-                <p>será que não iria ser assim para sempre?
-                <br> Não iriam agora ser cada vez mais intensos?</p>
+                <p>Será que não iria ser assim para sempre? </p>
+              </br></br>
+                <p> Não iriam agora ser cada vez mais intensos?</p>
             </div>
             <div class="cabeça-dir text">
                 <p>Não seriam ameaçadores para a sua existência?</p>
@@ -200,7 +227,7 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
         </section>
 
         <section id="part3_text5" data-aos="fade-in">
-            <video  muted>
+            <video muted>
                 <source src="img/pt3/FundoPreto.mp4" type="video/mp4">
             </video>
             <div class="text6-container paragraph white">
@@ -221,30 +248,51 @@ O empresário, hesitante e atento, confirmou mais uma vez o seu total consentime
 $(window).scroll(function(){
 
   $('video').each(function(){
-      if ($(this).is(":in-viewport(50)")) {
+    //var audio = $(this).closest('audio');
+
+      if ($(this).is(":in-viewport(20)")) {
           $(this)[0].play();
+
       } else {
           $(this)[0].pause();
+
       }
   })
 
+  $('audio').each(function(){
 
-   if ($("#part2-text1").is(":in-viewport(50)")){
-     var scroll = $(window).scrollTop() -4975;
-   //console.log(scroll);
+    $(this)[0].volume = 0.1;
+
+    if ($(this).closest('section').is(":in-viewport(10)") || $(this).closest('div').is(":in-viewport(10)")) {
+        $(this)[0].play();
+    } else {
+        $(this)[0].pause();
+    }
+
+
+})
+
+
+
+   if ($("#part2-text1").is(":in-viewport()")){
+     var scroll = $(window).scrollTop()-5050;
      $("#comboio").css({
-       width: (100 + scroll/5) + "%"
+       width: (50 + scroll/8) + "%"
      })
-          $("#comboio").css({
-             opacity: 1- scroll / 700
 
-         })
+       //  $("#comboio").css({
+       //     opacity: 1 - scroll / 700
+       //
+       // })
+
    }
 
-
-
-
 });
+var vid = document.getElementById("publico")[0];
+var audios = document.getElementsByTagName("audio")[0];
+vid.volume = 0.02;
+audios.volume=0.3;
+
 
       </script>
 </body>
