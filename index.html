@@ -49,7 +49,7 @@
     </div>
   <main>
 
-    <audio id="musica" autoplay>
+    <audio id="musica1" autoplay>
         <source src="img/pt1/pt1-music.mp3" type="audio/mp3">
     </audio>
 
@@ -144,18 +144,18 @@
 
 
         <!-- PARTE 2 -->
-<div>
-  <audio class="play">
+
+  <audio id="musica2">
         <source src="img/pt2/comboio.mp3" type="audio/mp3">
     </audio>
+
       <section id="nr2" data-aos="fade-in" class="section">
           <video autoplay muted>
               <source src="img/pt2/nr2.mp4" type="video/mp4">
           </video>
       </section>
 
-
-                <section class="pt2 "id="part2-text1" data-aos="fade-right" class="section">
+                <section class="pt2" id="part2-text1" data-aos="fade-right" class="section">
 
                     <video id="comboio" autoplay muted loop>
                         <source src="img/pt2/parte2_fumo.mp4" type="video/mp4">
@@ -175,21 +175,22 @@
                         </p>
                     </div>
                 </section>
-</div>
+
 <!-- PARTE 3 -->
 
-<div id="pt3">
+<div class="pt3">
 
-<audio class="play">
+
+<audio id="musica3" class="play">
     <source src="img/pt3/pt3_music.mp3" type="audio/mp3">
 </audio>
-        <section id="nr3" data-aos="fade-in" class="section">
+        <section  id="nr3" data-aos="fade-in" class="section">
             <video autoplay muted>
                 <source src="img/pt3/nr3.mp4" type="video/mp4">
             </video>
         </section>
 
-        <section id="part3_text1" data-aos="fade-in" class="section">
+        <section  id="part3_text1" data-aos="fade-in" class="section">
           <audio>
               <source src="img/pt3/lagrima.wav" type="audio/wav">
           </audio>
@@ -205,7 +206,7 @@
         </section>
 
 
-        <section id="part3_text2" data-aos="fade-in" class="section">
+        <section  id="part3_text2" data-aos="fade-in" class="section">
             <video muted>
                 <source src="img/pt3/pt3_sect3.mp4" type="video/mp4">
             </video>
@@ -213,7 +214,6 @@
                 <p>Profundamente assustado, o empresário levantou-se de um pulo e perguntou o que acontecera e como não obtivesse resposta pôs-se em cima do banco, acariciou o trapezista e juntou a cara dele à sua de tal maneira que também sobre ele se derramaram as lágrimas. Mas só depois de muitas perguntas e palavras lisonjeadoras o trapezista falou soluçando:</p>
             </div>
         </section>
-
 
         <section id="part3_text3" data-aos="fade-in" class="section">
             <video muted>
@@ -226,7 +226,7 @@
             </div>
         </section>
 
-        <section id="part3_text4" data-aos="fade-in" class="section">
+        <section  id="part3_text4" data-aos="fade-in" class="section">
             <video muted>
                 <source src="img/pt3/Cabeça.mp4" type="video/mp4">
             </video>
@@ -243,7 +243,7 @@
             </div>
         </section>
 
-        <section id="part3_text5" data-aos="fade-in" class="section">
+        <section  id="part3_text5" data-aos="fade-in" class="section">
             <video muted>
                 <source src="img/pt3/FundoPreto.mp4" type="video/mp4">
             </video>
@@ -251,8 +251,8 @@
                 <p>E o empresário acreditou mesmo ver, no sono aparentemente sossegado e sem choro, as primeiras rugas a aparecerem na testa lisa e infantil do trapezista.</p>
             </div>
         </section>
-
 </div>
+
     <footer>
       <ul>
         <h4>Sob orientação de:</h4>
@@ -293,8 +293,7 @@ $(window).scroll(function(){
   $('.play').each(function(){
     console.log($(this)[0]);
     $(this)[0].volume = 0.1;
-    if ($(this).closest('section').is(":in-viewport(10)")
-    || $(this).closest('div').is(":in-viewport(10)")) {
+    if ($(this).closest('section').is(":in-viewport(10)") || $(this).closest('div').is(":in-viewport(10)")) {
         $(this)[0].play();
     }
     else{
@@ -308,12 +307,20 @@ $(window).scroll(function(){
        width: (50 + scroll/8) + "%"
      })
    }
+   if ($(".pt2").is(":in-viewport()")){
+     $('#musica1')[0].pause();
+     $('#musica2')[0].play();
 
-   if ($("#pt3").is(":in-viewport()") || $(".pt2").is(":in-viewport()")){
-     $('#musica')[0].pause();
    }
    else{
-   $('#musica')[0].play();}
+     $('#musica2')[0].pause();
+   }
+
+   if ($(".pt3").is(":in-viewport()")){
+     $('#musica1')[0].pause();
+     $('#musica3')[0].play();
+   }
+
 
 });
 var vid = document.getElementById("publico");
