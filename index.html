@@ -47,16 +47,20 @@
         </div>
         <div class="popup-back"></div>
     </div>
-
   <main>
-      <div>
+
+    <audio autoplay>
+        <source src="img/pt1/pt1-music.mp3" type="audio/mp3">
+    </audio>
+
+
         <section id="intro" class="section">
+
             <video autoplay muted>
                 <source src="img/pt1/pt1_start.mp4" type="video/mp4">
             </video>
-            <audio autoplay>
-              <source src="img/pt1/inicio.flac" type="audio/flac">
-            </audio>
+
+
 
             <div class="intro-text1 text">
                 <h1>O Primeiro Sofrimento<br> Franz Kafka</h1>
@@ -141,22 +145,21 @@
                 <p>Mas também era bom vê-lo lá em cima e, quando na época mais quente do ano se abriam as janelas laterais ao longo de toda a abóbada e o sol entrava com o ar fresco pelo espaço sombrio adentro, então chegava mesmo a ser bonito. E verdade que ele convivia pouco com pessoas, por vezes com um colega acrobata que trepava a escada de corda e flcavam os dois sentados em cima do trapézio, encostavam-se aos cabos de suporte e conversavam.</p>
             </div>
         </section>
-      </div>
 
 
         <!-- PARTE 2 -->
+<div>
+  <audio>
+        <source src="img/pt2/comboio.mp3" type="audio/mp3">
+    </audio>
       <section id="nr2" data-aos="fade-in" class="section">
           <video autoplay muted>
               <source src="img/pt2/nr2.mp4" type="video/mp4">
           </video>
       </section>
 
-          <audio>
-              <source src="img/pt2/comboio.mp3" type="audio/mp3">
-          </audio>
 
                 <section id="part2-text1" data-aos="fade-right" class="section">
-
 
                     <video id="comboio" autoplay muted loop>
                         <source src="img/pt2/parte2_fumo.mp4" type="video/mp4">
@@ -176,8 +179,13 @@
                         </p>
                     </div>
                 </section>
-
+</div>
 <!-- PARTE 3 -->
+<div>
+
+<audio>
+    <source src="img/pt3/pt3_music.mp3" type="audio/mp3">
+</audio>
         <section id="nr3" data-aos="fade-in" class="section">
             <video autoplay muted>
                 <source src="img/pt3/nr3.mp4" type="video/mp4">
@@ -198,7 +206,6 @@
                 <p>Descobre porquê...</p>
             </div>
         </section>
-
 
 
         <section id="part3_text2" data-aos="fade-in" class="section">
@@ -248,8 +255,23 @@
             </div>
         </section>
 
+</div>
+    <footer>
+      <ul>
+        <h4>Sob orientação de:</h4>
+          <p>Ana Boavida</p>
+          <p>Luís Pereira</p>
+          <p>Pedro Martins</p>
+      </ul>
+      <ul>
+        <h4>Fontes:</h4>
+        <a href="https://freesound.org/" target="_blank"><li>freesound.org</li></a>
+        <a href="freemusicarchive.org" target="_blank"><li>freemusicarchive.org</li></a>
+        <a href="https://freesound.org/" target="_blank"><li>freesound.org</li></a>
+        <a href="https://epidemicsound.com/" target="_blank"><li>epidemicsound.com</li></a>
+      </ul>
+    </footer>
     </main>
-
     <script>
         AOS.init();
         AOS.init({
@@ -262,7 +284,7 @@ $(window).scroll(function(){
   $('video').each(function(){
     //var audio = $(this).closest('audio');
 
-      if ($(this).is(":in-viewport(20)")) {
+      if ($(this).is(":in-viewport(10)")) {
           $(this)[0].play();
 
       } else {
@@ -274,35 +296,26 @@ $(window).scroll(function(){
   $('audio').each(function(){
 
     $(this)[0].volume = 0.1;
+    console.log($(this)[0]);
 
     if ($(this).closest('section').is(":in-viewport(10)") || $(this).closest('div').is(":in-viewport(10)")) {
         $(this)[0].play();
-    } else {
-        $(this)[0].pause();
     }
 
 
 })
 
-
-
    if ($("#part2-text1").is(":in-viewport()")){
-     var scroll = $(window).scrollTop()-5050;
+     var scroll = $(window).scrollTop()-6200;
      $("#comboio").css({
        width: (50 + scroll/8) + "%"
      })
-
-       //  $("#comboio").css({
-       //     opacity: 1 - scroll / 700
-       //
-       // })
-
    }
 
 });
 var vid = document.getElementById("publico")[0];
 var audios = document.getElementsByTagName("audio")[0];
-vid.volume = 0.02;
+
 audios.volume=0.3;
 
 

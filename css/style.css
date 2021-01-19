@@ -5,11 +5,13 @@
 }
 /*Secções com nrs - altura menor*/
 #nr1, #nr3 {
-    height: 40vh;
+    height: 90vh;
 }
-
-#nr2 {
-    height: 60vh;
+#nr2{
+  height:100vh;
+}
+#nr1 video, #nr2 video, #nr3 video{
+  height:90%;
 }
 
 section{
@@ -115,7 +117,38 @@ video{
   font-size: 1.4em;
 
 }
+/*---------FOOTER--------------------*/
+*{
+  margin:0;
+  padding:0;
+}
+main{
+  height: 100vh;
+  background: black;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  text-align: right;
+}
+ul:first-of-type{
+  text-align: left;
+}
+footer ul{
+  list-style:none;
+  width: fit-content;
+  float:right;
+  margin:4%;
+}
+footer a{
+  text-decoration:none;
+  color: #000;
+}
 
+footer a:hover {
+  text-decoration:underline;
+}
 
 /*--------------------------POPUP-------------------------*/
 .mobile-popup{

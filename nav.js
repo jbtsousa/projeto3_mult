@@ -11,7 +11,6 @@ $(window).bind('scroll',function(e){
         $('section').each(function(i,item){
             var ele = $(item), nextTop;
 
-            console.log($('section'));
             //console.log(ele.next().html());
 
             if (typeof ele.next().offset() != "undefined") {
@@ -60,7 +59,7 @@ $(window).scroll(function() {
     var height = $(window).scrollTop();
     var introHeight = $("#intro").height();
     //console.log("janela: " + height + "secção: " + introHeight);
-    
+
     if(height >= introHeight){
         $("#menu").fadeIn();
     }
