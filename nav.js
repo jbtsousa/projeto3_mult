@@ -75,3 +75,13 @@ $(".flashback").click(function() {
         scrollTop: $("#nr1").offset().top
     }, 4000);
 });
+const url = window.location.href;
+const sub = "part3_text1";
+//console.log(url.includes(sub));
+var fb = document.querySelector(".flashback");
+if(url.includes(sub)){
+    fb.style.display = "block";
+}
+else{
+    fb.style.display = "none";
+}

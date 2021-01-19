@@ -66,10 +66,9 @@ video{
 
 
 /*--------------------------PARTE 2-------------------------*/
-.part2-text1 {
-  overflow:scroll;
+#part2-text1 {
+  overflow:hidden;
 }
-
 #quote{
     position:absolute;
     width: calc(100vw / 3);
@@ -108,6 +107,7 @@ video{
     padding: 1% 2%;
     cursor: pointer;
     transition: 0.3s;
+    display: none;
 }
 .flashback:hover{
     background: #000;
