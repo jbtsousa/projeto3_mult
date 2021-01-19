@@ -49,7 +49,7 @@
     </div>
   <main>
 
-    <audio autoplay>
+    <audio controls autoplay>
         <source src="img/pt1/pt1-music.mp3" type="audio/mp3">
     </audio>
 
@@ -59,8 +59,6 @@
             <video autoplay muted>
                 <source src="img/pt1/pt1_start.mp4" type="video/mp4">
             </video>
-
-
 
             <div class="intro-text1 text">
                 <h1>O Primeiro Sofrimento<br> Franz Kafka</h1>
@@ -92,7 +90,7 @@
 
 
         <section id="text2" data-aos="fade-in" class="section">
-          <audio>
+          <audio class="play">
             <source src="img/pt1/exhale.wav" type="audio/wav">
           </audio>
             <video muted>
@@ -116,13 +114,13 @@
 
 
         <section id="text4" data-aos="fade-in" class="section">
-          <audio>
+          <audio class="play">
             <source src="img/pt1/aplauso3.wav" type="audio/wav">
           </audio>
             <video muted>
                 <source src="img/pt1/pt1_sect4.mp4" type="video/mp4">
             </video>
-            <audio id="publico">
+            <audio id="publico" class="play">
               <source src="img/pt1/publico.mp3" type="audio/mp3">
             </audio>
             <div class="text4-container paragraph">
@@ -135,7 +133,7 @@
         </section>
 
         <section id="text5" data-aos="fade-in" class="section">
-          <audio>
+          <audio class="play">
             <source src="img/pt2/murmurio.wav" type="audio/wav">
           </audio>
             <video  muted>
@@ -149,7 +147,7 @@
 
         <!-- PARTE 2 -->
 <div>
-  <audio>
+  <audio class="play">
         <source src="img/pt2/comboio.mp3" type="audio/mp3">
     </audio>
       <section id="nr2" data-aos="fade-in" class="section">
@@ -181,9 +179,10 @@
                 </section>
 </div>
 <!-- PARTE 3 -->
+
 <div>
 
-<audio>
+<audio class="play">
     <source src="img/pt3/pt3_music.mp3" type="audio/mp3">
 </audio>
         <section id="nr3" data-aos="fade-in" class="section">
@@ -293,13 +292,14 @@ $(window).scroll(function(){
       }
   })
 
-  $('audio').each(function(){
-
-    $(this)[0].volume = 0.1;
+  $('.play').each(function(){
     console.log($(this)[0]);
-
+    $(this)[0].volume = 0.1;
     if ($(this).closest('section').is(":in-viewport(10)") || $(this).closest('div').is(":in-viewport(10)")) {
         $(this)[0].play();
+    }
+    else{
+      $(this)[0].pause();
     }
 
 
@@ -313,9 +313,9 @@ $(window).scroll(function(){
    }
 
 });
-var vid = document.getElementById("publico")[0];
+var vid = document.getElementById("publico");
 var audios = document.getElementsByTagName("audio")[0];
-
+vid.volume=0.01;
 audios.volume=0.3;
 
 
