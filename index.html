@@ -49,7 +49,7 @@
     </div>
   <main>
 
-    <audio controls autoplay>
+    <audio id="musica" autoplay>
         <source src="img/pt1/pt1-music.mp3" type="audio/mp3">
     </audio>
 
@@ -114,14 +114,12 @@
 
 
         <section id="text4" data-aos="fade-in" class="section">
-          <audio class="play">
-            <source src="img/pt1/aplauso3.wav" type="audio/wav">
-          </audio>
+
             <video muted>
                 <source src="img/pt1/pt1_sect4.mp4" type="video/mp4">
             </video>
             <audio id="publico" class="play">
-              <source src="img/pt1/publico.mp3" type="audio/mp3">
+              <source src="img/pt1/publico_2.mp3" type="audio/mp3">
             </audio>
             <div class="text4-container paragraph">
                 <p>Esta maneira de viver não perturbava o ambiente por aí além; só durante os outros números é que atrapalhava um pouco tê-lo lá em cima dado que era impossível escondê-lo e, apesar de nessas alturas ele se comportar de modo bastante sossegado, o olhar do público desviava-se aqui e ali na sua direção.
@@ -157,7 +155,7 @@
       </section>
 
 
-                <section id="part2-text1" data-aos="fade-right" class="section">
+                <section class="pt2 "id="part2-text1" data-aos="fade-right" class="section">
 
                     <video id="comboio" autoplay muted loop>
                         <source src="img/pt2/parte2_fumo.mp4" type="video/mp4">
@@ -167,7 +165,7 @@
                     </div>
                 </section>
 
-                <section id="part2-text2" data-aos="fade-in" class="section">
+                <section class="pt2" id="part2-text2" data-aos="fade-in" class="section">
                     <video id="conversa" muted>
                         <source src="img/pt2/conversa.mp4" type="video/mp4">
                     </video>
@@ -180,7 +178,7 @@
 </div>
 <!-- PARTE 3 -->
 
-<div>
+<div id="pt3">
 
 <audio class="play">
     <source src="img/pt3/pt3_music.mp3" type="audio/mp3">
@@ -295,14 +293,13 @@ $(window).scroll(function(){
   $('.play').each(function(){
     console.log($(this)[0]);
     $(this)[0].volume = 0.1;
-    if ($(this).closest('section').is(":in-viewport(10)") || $(this).closest('div').is(":in-viewport(10)")) {
+    if ($(this).closest('section').is(":in-viewport(10)")
+    || $(this).closest('div').is(":in-viewport(10)")) {
         $(this)[0].play();
     }
     else{
       $(this)[0].pause();
     }
-
-
 })
 
    if ($("#part2-text1").is(":in-viewport()")){
@@ -312,11 +309,17 @@ $(window).scroll(function(){
      })
    }
 
+   if ($("#pt3").is(":in-viewport()") || $(".pt2").is(":in-viewport()")){
+     $('#musica')[0].pause();
+   }
+   else{
+   $('#musica')[0].play();}
+
 });
 var vid = document.getElementById("publico");
 var audios = document.getElementsByTagName("audio")[0];
-vid.volume=0.01;
-audios.volume=0.3;
+vid.volume=0.001;
+audios.volume=0.1;
 
 
       </script>
